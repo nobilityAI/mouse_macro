@@ -1,0 +1,4 @@
+pynput>=1.7,<3
+platformdirs>=3,<6
+# Optional (mac-only) for the Mini HUD “float over fullscreen” nicety:
+pyobjc; sys_platform == "darwin"
