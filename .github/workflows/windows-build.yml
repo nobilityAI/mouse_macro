@@ -28,7 +28,7 @@ jobs:
 
       - name: PyInstaller (one-folder)
         run: |
-          pyinstaller --noconfirm --windowed --name "GestureKeys" backend.py
+          pyinstaller --noconfirm --onefile --windowed --name "JohnsElbow" backend.py
         shell: pwsh
 
       - name: Upload app (dist folder)
