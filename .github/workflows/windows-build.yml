@@ -31,11 +31,11 @@ jobs:
           pyinstaller --noconfirm --onefile --windowed --name "JohnsElbow" backend.py
         shell: pwsh
 
-      - name: Upload app (dist folder)
+      - name: Upload app (dist exe)
         uses: actions/upload-artifact@v4
         with:
-          name: GestureKeys-dist
-          path: dist/GestureKeys/
+          name: JohnsElbow-exe
+          path: dist/JohnsElbow.exe
 
       - name: Install Inno Setup
         run: choco install innosetup --no-progress -y
@@ -48,5 +48,5 @@ jobs:
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: GestureKeys-Installer
-          path: GestureKeys-Setup.exe
+          name: JohnsElbow-Installer
+          path: JohnsElbow-Setup.exe
